@@ -12,7 +12,7 @@ public class AuthenticationController {
     private AuthenticationService authenticationService;
 
     @PostMapping("/login")
-    public String login(@ResquestParam String username, @RequestParam String password){
+    public String login(@RequestParam String username, @RequestParam String password){
         boolean authenticated = authenticationService.authenticate(username, password);
         if(authenticated) {
             return "TOKEN";

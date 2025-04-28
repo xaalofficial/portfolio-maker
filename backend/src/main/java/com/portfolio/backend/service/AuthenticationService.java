@@ -5,7 +5,7 @@ import com.portfolio.backend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
+@Service
 public class AuthenticationService {
     private UserRepository userRepository;
     public boolean authenticate(String username, String password) {
