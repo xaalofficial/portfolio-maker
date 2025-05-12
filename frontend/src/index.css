@@ -1,0 +1,92 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 30% 12%;
+    --foreground: 210 40% 98%;
+
+    --card: 260 30% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 260 30% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 263 70% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 260 20% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 260 20% 20%;
+    --muted-foreground: 215.4 16.3% 70%;
+
+    --accent: 260 20% 20%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 260 30% 26%;
+    --input: 260 30% 26%;
+    --ring: 263 70% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 260 30% 12%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 263 70% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 20% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 260 30% 26%;
+    --sidebar-ring: 263 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#12071f] text-foreground;
+  }
+
+  ::selection {
+    @apply bg-violet-500/30 text-violet-100;
+  }
+}
+
+.page-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.project-card {
+  @apply transition-all duration-300;
+}
+
+.input-transition {
+  @apply transition-all duration-200;
+}
+
+/* Custom glassmorphism effects */
+.glass-card {
+  @apply backdrop-blur-md bg-white/5 border border-white/10;
+}
+
+.glass-nav {
+  @apply backdrop-blur-lg bg-black/20;
+}
+
+/* Custom text gradients */
+.text-gradient-purple {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-300 via-purple-400 to-fuchsia-500;
+}
+
+/* Custom animations */
+.hover-scale {
+  @apply transition-transform duration-200 hover:scale-105;
+}
