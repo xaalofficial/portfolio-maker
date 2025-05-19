@@ -1,4 +1,4 @@
 package com.portfolio.backend.model;
 
-public class User {
+public class Project {
 }
