@@ -1,5 +1,6 @@
 package com.portfolio.backend.model;
 
+import java.util.List;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,7 +22,8 @@ public class Project {
 
     private String repoLink;
 
-    private String technologies;  // Could be comma-separated list or JSON string
+    @ElementCollection
+    private List<String> technologies;
 
     private String screenshot;    // URL to screenshot image
 
